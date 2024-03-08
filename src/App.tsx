@@ -1,12 +1,10 @@
-import './App.css';
-import { Button } from 'primereact/button';                             
-function App() {
+import React from 'react';
 
+function App() {
   return (
     <>
-      <Button >Sushil</Button>
     </>
-  )
+  );
 }
 
-export default App
+export default App;

@@ -1,18 +1,9 @@
-import BottomBar from "@/components/shared/BottomBar";
-import LeftSidebar from "@/components/shared/LeftSidebar";
-import TopBar from "@/components/shared/TopBar";
-import { useUserContext } from "@/context/AuthProvider";
-import { useEffect, useState } from "react";
 import { Outlet } from "react-router";
+import TopBar from "../components/shared/TopBar";
+import LeftSidebar from "../components/shared/LeftSidebar";
+import BottomBar from "../components/shared/BottomBar";
 
 const RootLayout = () => {
-  console.log("HERE in ROOTLAYOU");
-  const { currentDomain } = useUserContext();
-  const [outletKey, setOutletKey] = useState(0);
- 
-  useEffect(() => {
-    setOutletKey((prevKey) => prevKey + 1);
-  }, [currentDomain]);
   
   return (
     <div className="w-full md:flex">
@@ -20,7 +11,7 @@ const RootLayout = () => {
       <LeftSidebar />
 
       <section className="flex flex-1 h-full">
-        <Outlet key={outletKey} />
+        <Outlet  />
       </section>
       <BottomBar />
     </div>

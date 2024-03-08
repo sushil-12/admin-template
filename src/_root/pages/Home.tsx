@@ -1,11 +1,11 @@
+import React from 'react'
+
 const Home = () => {
-
   return (
-    <div className="common-container h-100">
-        Will Be Adding a cool dashboard here!!
+    <div>
+      
     </div>
+  )
+}
 
-  );
-};
-
-export default Home;
+export default Home
